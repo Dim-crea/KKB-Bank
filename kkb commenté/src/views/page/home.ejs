@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs')%>
+<body>
+  <%- include('../partials/header.ejs')%>
+  <!-- <div style="width: 500px;"><canvas id="dimensions"></canvas></div><br/> -->
+  <main>
+    <h1> Bienvenue sur kokot bank </h1>
+    <h3> La banque qui conserve vos coincoins</h3>
+    
+    <p>Déjà client ? <a class="bttn" href="/connexForm">connectez vous ici </a></p>
+    <p>Vous souhaitez ouvrir un compte chez nous ? <a class="bttn" href="/registerForm">C'est par ici </a> </p>
+
+    <% if(typeof message !== 'undefined'){%>
+      <p style="color:green"><%=message%></p>
+    <% } %>
+  </main>
+  <%- include('../partials/footer.ejs')%>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs')%>
+<body>
+  <%- include('../partials/header.ejs')%>
+  <!-- <div style="width: 500px;"><canvas id="dimensions"></canvas></div><br/> -->
+  <main>
+    <h1> Bienvenue sur kokot bank </h1>
+   
+    
+   <h4> Bonjour, <%= infosClient.name %></h4>
+
+   <h5>Voici les informations vous concernant : </h5>
+
+    <% for( const info in infosClient) {%>
+        <p> <%= info  %> : <%= infosClient[info] %></p>
+    <% }%>
+    <% if(typeof message !== 'undefined'){%>
+      <p style="color:green"><%=message%></p>
+    <% } %>
+  </main>
+  <%- include('../partials/menuClient.ejs')%>
+</body>
+</html>
